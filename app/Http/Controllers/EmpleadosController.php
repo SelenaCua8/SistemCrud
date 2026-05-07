@@ -32,6 +32,8 @@ class EmpleadosController extends Controller
     public function store(Request $request)
     {
         //
+        $datosEmpleado =request()->all(); //hago que se almacene todo lo que se envia al metodo storage
+        return response()->json($datosEmpleado);
     }
 
     /**
