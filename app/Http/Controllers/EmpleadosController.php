@@ -35,6 +35,12 @@ class EmpleadosController extends Controller
        // $datosEmpleado =request()->all(); //hago que se almacene todo lo que se envia al metodo storage
 
        $datosEmpleado=request()->except('_token');
+
+       //recolectar para las fotos
+       if($request->hasFile('Foto')){
+        $datosEmpleado['Foto']=$request->file('Foto')->store('uploads','public');
+
+       }
        Empleados::insert($datosEmpleado); //para insertarlo en la bd
 
        return response()->json($datosEmpleado);
