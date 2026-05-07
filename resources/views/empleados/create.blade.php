@@ -11,10 +11,10 @@
     <input type="text" name="ApellidoMaterno" id="ApellidoMaterno" value="">
 
     <label for="Correo">{{'Correo'}}</label>
-    <input type="text" name="Correo" id="Correo" value="">
+    <input type="email" name="Correo" id="Correo" value="">
 
     <label for="Foto">{{'Foto'}}</label>
-    <input type="text" name="Foto" id="Foto" value="">
+    <input type="file" name="Foto" id="Foto" value="">
 
 
 
