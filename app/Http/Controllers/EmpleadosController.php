@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Empleados;
 use Illuminate\Http\Request;
 
+
 class EmpleadosController extends Controller
 {
     /**
@@ -13,6 +14,7 @@ class EmpleadosController extends Controller
     public function index()
     {
         //
+        return view('empleados.index'); //nos devuelve la vista index
     }
 
     /**
@@ -21,6 +23,7 @@ class EmpleadosController extends Controller
     public function create()
     {
         //
+        return view('empleados.create'); //nos devuelve la vista create
     }
 
     /**
