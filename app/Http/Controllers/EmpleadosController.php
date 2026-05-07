@@ -36,7 +36,7 @@ class EmpleadosController extends Controller
 
        $datosEmpleado=request()->except('_token');
 
-       //recolectar para las fotos
+       //recolectar para las fotos que va a storage/apps/public/uploads
        if($request->hasFile('Foto')){
         $datosEmpleado['Foto']=$request->file('Foto')->store('uploads','public');
 
