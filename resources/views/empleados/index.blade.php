@@ -25,7 +25,12 @@
             <td>{{$empleado->ApellidoPaterno}}</td>
             <td>{{$empleado->ApellidoMaterno}}</td>
             <td>{{$empleado->Correo}}</td>
-            <td>Editar | Borrar </td>
+            <td>Editar |
+                <form method="post" action="{{ url('/empleados/'.$empleado->id)}}">
+                    {{csrf_field()}}
+                    {{ @method_field('DELETE')}}
+                    <button type="submit" onclick="return confirm('¿Borrar?')">Borrar</button>
+                </form> </td>
         </tr>
         @endforeach
     </tbody>
